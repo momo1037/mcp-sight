@@ -4,7 +4,20 @@ Give Claude Code the power of sight — describe images using any vision-capable
 
 ## Setup
 
-Add to `~/.claude/settings.json` or `<project>/.claude/settings.json`:
+**Method 1: `claude mcp add` (recommended)**
+
+```bash
+claude mcp add mcp-sight \
+  --scope user \
+  --env VISION_API_KEY=sk-your-api-key \
+  --env VISION_BASE_URL=https://api.openai.com/v1 \
+  --env VISION_MODEL=gpt-4o \
+  -- bunx --bun mcp-sight
+```
+
+**Method 2: Edit `~/.claude.json` directly**
+
+Add to the `mcpServers` block in `~/.claude.json`:
 
 ```json
 {
@@ -22,16 +35,9 @@ Add to `~/.claude/settings.json` or `<project>/.claude/settings.json`:
 }
 ```
 
-Or use the `claude mcp add` command:
+**Method 3: `.mcp.json` for team sharing**
 
-```bash
-claude mcp add mcp-sight \
-  --scope user \
-  --env VISION_API_KEY=sk-your-api-key \
-  --env VISION_BASE_URL=https://api.openai.com/v1 \
-  --env VISION_MODEL=gpt-4o \
-  -- bunx --bun mcp-sight
-```
+Same JSON as above, placed in `<project>/.mcp.json` — commit to git so the whole team gets it.
 
 ## Environment Variables
 
