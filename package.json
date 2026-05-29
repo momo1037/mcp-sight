@@ -1,0 +1,40 @@
+{
+  "name": "mcp-vision",
+  "version": "1.0.0",
+  "description": "MCP server that describes images using a vision-capable LLM (OpenAI-compatible API)",
+  "type": "module",
+  "main": "./src/index.ts",
+  "bin": {
+    "mcp-vision": "bin/mcp-vision.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^3.0",
+    "@modelcontextprotocol/sdk": "^1.29",
+    "ai": "^6.0",
+    "zod": "^3.25"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "keywords": [
+    "mcp",
+    "vision",
+    "image-description",
+    "model-context-protocol",
+    "claude-code"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicepkg/mcp-vision.git"
+  }
+}
