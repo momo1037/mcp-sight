@@ -11,7 +11,7 @@ Add to `~/.claude/settings.json` or `<project>/.claude/settings.json`:
   "mcpServers": {
     "mcp-sight": {
       "command": "bunx",
-      "args": ["mcp-sight"],
+      "args": ["--bun", "mcp-sight"],
       "env": {
         "VISION_API_KEY": "sk-your-api-key",
         "VISION_BASE_URL": "https://api.openai.com/v1",
@@ -30,7 +30,7 @@ claude mcp add mcp-sight \
   --env VISION_API_KEY=sk-your-api-key \
   --env VISION_BASE_URL=https://api.openai.com/v1 \
   --env VISION_MODEL=gpt-4o \
-  -- bunx mcp-sight
+  -- bunx --bun mcp-sight
 ```
 
 ## Environment Variables
