@@ -1,11 +1,11 @@
 {
-  "name": "mcp-vision",
+  "name": "mcp-sight",
   "version": "1.0.0",
-  "description": "MCP server that describes images using a vision-capable LLM (OpenAI-compatible API)",
+  "description": "MCP server that gives Claude Code sight — describe images using a vision-capable LLM",
   "type": "module",
   "main": "./src/index.ts",
   "bin": {
-    "mcp-vision": "bin/mcp-vision.js"
+    "mcp-sight": "bin/mcp-vision.js"
   },
   "files": [
     "bin/",
@@ -36,6 +36,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/momo1037/mcp-vision.git"
+    "url": "git+https://github.com/nicepkg/mcp-sight.git"
   }
 }

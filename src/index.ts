@@ -71,7 +71,7 @@ const openai = createOpenAI({
 // ─── MCP Server ────────────────────────────────────────────────────
 
 const server = new McpServer({
-  name: "mcp-vision",
+  name: "mcp-sight",
   version: "1.0.0",
 });
 
@@ -181,7 +181,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error(`mcp-vision ready (model: ${VISION_MODEL}, base: ${VISION_BASE_URL})`);
+  console.error(`mcp-sight ready (model: ${VISION_MODEL}, base: ${VISION_BASE_URL})`);
 }
 
 main().catch((err) => {
