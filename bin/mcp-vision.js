@@ -1,3 +1,2 @@
-#!/usr/bin/env node
-// npm-compatible bin entry — bun handles TS import when run via bun
+#!/usr/bin/env bun
 import("../src/index.ts");
