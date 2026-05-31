@@ -14,7 +14,8 @@
     "LICENSE"
   ],
   "scripts": {
-    "dev": "bun run src/index.ts"
+    "dev": "bun run src/index.ts",
+    "test": "bun test"
   },
   "dependencies": {
     "@ai-sdk/openai": "^3.0",
