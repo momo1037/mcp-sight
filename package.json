@@ -1,11 +1,11 @@
 {
   "name": "mcp-sight",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "MCP server that gives Claude Code sight — describe images using a vision-capable LLM",
   "type": "module",
   "main": "./src/index.ts",
   "bin": {
-    "mcp-sight": "bin/mcp-vision.js"
+    "mcp-sight": "bin/mcp-sight.js"
   },
   "files": [
     "bin/",

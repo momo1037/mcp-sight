@@ -47,7 +47,7 @@ Same JSON as above, placed in `<project>/.mcp.json` — commit to git so the who
 | `VISION_BASE_URL` | No | `https://api.openai.com/v1` | OpenAI-compatible API base URL |
 | `VISION_MODEL` | No | `mimo-v2.5` | Model ID for vision requests |
 
-## Tool: `describe_image`
+## Tool: `see_image`
 
 When you send an image to Claude Code, it can call this tool to "see" it.
 
