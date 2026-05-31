@@ -57,15 +57,15 @@ async function describeImage(prompt: string, system?: string): Promise<string> {
 // ─── Tests ────────────────────────────────────────────────────────
 
 describe("see_image", () => {
-  it("describes the test image with default prompt", { timeout: 30000 }, async () => {
+  it("describes the test image with default prompt", async () => {
     const result = await describeImage("Describe this image in detail.");
 
     expect(result).toBeTruthy();
     expect(typeof result).toBe("string");
     expect(result.length).toBeGreaterThan(20);
-  });
+  }, { timeout: 30000 });
 
-  it("returns concise output with brief detail level", { timeout: 30000 }, async () => {
+  it("returns concise output with brief detail level", async () => {
     const brief = await describeImage(
       "Describe this image.",
       "You are a concise image describer. Reply in 1-2 short sentences. Be direct and brief.",
@@ -73,24 +73,24 @@ describe("see_image", () => {
 
     expect(brief).toBeTruthy();
     expect(brief.length).toBeLessThan(300);
-  });
+  }, { timeout: 30000 });
 
-  it("responds to a specific question about the image", { timeout: 30000 }, async () => {
+  it("responds to a specific question about the image", async () => {
     const result = await describeImage(
       "What color is the creature in this image? Answer in one word.",
     );
 
     // Color perception varies — accept any reasonable color word
     expect(result.toLowerCase()).toMatch(/orange|salmon|peach|brown|tan|beige/);
-  });
+  }, { timeout: 30000 });
 
-  it("detects the pixel art style", { timeout: 30000 }, async () => {
+  it("detects the pixel art style", async () => {
     const result = await describeImage(
       "What art style is this image? Answer briefly.",
     );
 
     expect(result.toLowerCase()).toMatch(/pixel|8-bit|retro|blocky/);
-  });
+  }, { timeout: 30000 });
 
   it("returns error for non-existent file", () => {
     expect(() => readFileSync("C:/nonexistent/path/image.png")).toThrow();
